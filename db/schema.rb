@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_08_15_092535) do
+ActiveRecord::Schema.define(version: 2023_09_11_115202) do
 
   create_table "comments", force: :cascade do |t|
     t.string "content"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 2023_08_15_092535) do
     t.integer "level"
     t.float "lat"
     t.float "lng"
+    t.string "area"
   end
 
   create_table "lectures", force: :cascade do |t|
