@@ -75,50 +75,62 @@ class GourmetsController < ApplicationController
 
   def Ginghiskhan
     @Ginghiskhan = Gourmet.where(food:"ジンギスカン")
+    @Ginghiskhan = @Ginghiskhan.page(params[:page]).per(6)
   end
 
   def Kaisendon
     @Kaisendon = Gourmet.where(food:"海鮮丼")
+    @Kaisendon = @Kaisendon.page(params[:page]).per(6)
   end
 
   def Sappororamen
     @Sappororamen = Gourmet.where(food:"札幌ラーメン")
+    @Sappororamen = @Sappororamen.page(params[:page]).per(6)
   end
 
   def Hokkaidoelse
     @Hokkaidoelse = Gourmet.where(food:"その他")
+    @Hokkaidoelse = @Hokkaidoelse.page(params[:page]).per(6)
   end
 
   def Edomaezushi
     @Edomaezushi = Gourmet.where(food:"江戸前寿司")
+    @Edomaezushi = @Edomaezushi.page(params[:page]).per(6)
   end
 
   def Monzyayaki
     @Monzyayaki = Gourmet.where(food:"もんじゃ焼き")
+    @Monzyayaki = @Monzyayaki.page(params[:page]).per(6)
   end
 
   def Chankonabe
     @Chankonabe = Gourmet.where(food:"ちゃんこ鍋")
+    @Chankonabe = @Chankonabe.page(params[:page]).per(6)
   end
 
   def Tokyoelse
     @Tokyoelse = Gourmet.where(food:"その他")
+    @Tokyoelse = @Tokyoelse.page(params[:page]).per(6)
   end
 
   def Takoyaki
     @Takoyaki = Gourmet.where(food:"たこ焼き")
+    @Takoyaki = @Takoyaki.page(params[:page]).per(6)
   end
 
   def Okonomiyaki
     @Okonomiyaki = Gourmet.where(food:"お好み焼き")
+    @Okonomiyaki = @Okonomiyaki.page(params[:page]).per(6)
   end
 
   def Kushikatu
     @Kushikatu = Gourmet.where(food:"串カツ")
+    @Kushikatu = @Kushikatu.page(params[:page]).per(6)
   end
 
   def Osakaelse
     @Osakaelse = Gourmet.where(food:"その他")
+    @Osakaelse = @Osakaelse.page(params[:page]).per(6)
   end
 
   def Motunabe
@@ -128,18 +140,21 @@ class GourmetsController < ApplicationController
 
   def Hakataramen
     @Hakataramen = Gourmet.where(food:"博多ラーメン")
+    @Hakataramen = @Hakataramen.page(params[:page]).per(6)
   end
 
   def Mizutaki
     @Mizutaki = Gourmet.where(food:"水炊き")
+    @Mizutaki = @Mizutaki.page(params[:page]).per(6)
   end
 
   def Fukuokaelse
     @Fukuokaelse = Gourmet.where(food:"その他")
+    @Fukuokaelse = @Fukuokaelse.page(params[:page]).per(6)
   end
 
   private
     def gourmet_params
-      params.require(:gourmet).permit(:prefecture, :food, :shop_name, :about_shop, :price, :address, :image, :tag_ids, :overall, :level, :lat, :lng)
+      params.require(:gourmet).permit(:prefecture, :food, :shop_name, :about_shop, :price, :addres, :image, :tag_ids, :overall, :level, :lat, :lng)
     end
 end

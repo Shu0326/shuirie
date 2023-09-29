@@ -21,15 +21,38 @@ Profile
       </div>
 
       <div class="name1">
-        <p>Name : <%= @user.name %></p>  
+        <p>Name</p> 
+        <div class="mypage_username">
+        <%= @user.name %> 
+        </div>
       </div>
     </div>
-
+    <br>
     <p>プロフィール : <%= @user.profile %></p>
     <br>
 
     <%= render 'follow_form' %>
     <%= render 'stats' %>
+
+    <div class="user-in">
+      <!--  
+      <h2><%= @user.email %></h2>
+      -->
+      <% if @user.id == current_user.id %>
+        <%= @msg %>
+      <% else %>
+        <% if @isRoom == true %>
+          <p><%= link_to '✉DMへ', room_path(@roomId) %></p>
+        <% else %>
+          <%= form_for @room do |f| %>
+          <%= fields_for @entry do |e|%>
+            <% e.hidden_field :user_id, value: @user.id %>
+          <% end %>
+          <%= f.submit "DMを開始する"%>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div> 
 
       <div class="edit">
         <% if current_user.id == @user.id %>
@@ -80,14 +103,33 @@ Profile
 </div>
 </div>
 
+<!-- 
+<div class="user-in">
 
-<!--
+<h2><%= @user.email %></h2>
+
+  <% if @user.id == current_user.id %>
+    <%= @msg %>
+  <% else %>
+    <% if @isRoom == true %>
+        <p><%= link_to 'DMへ', room_path(@roomId) %></p>
+    <% else %>
+      <%= form_for @room do |f| %>
+        <%= fields_for @entry do |e|%>
+          <% e.hidden_field :user_id, value: @user.id %>
+    <% end %>
+      <%= f.submit "DMを開始する"%>
+      <% end %>
+    <% end %>
+  <% end %>
+</div> 
+
   <div class="mypage-profile-right">
 
     <h2>ユーザー詳細ページ</h2>
 
     <div class="user-in">
-      <h2><%= @user.email %></h2>
+      <h2><%= @user.email %></h2> 
       <% if @user.id == current_user.id %>
         <%= @msg %>
       <% else %>

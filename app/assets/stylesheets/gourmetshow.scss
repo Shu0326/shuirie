@@ -1,9 +1,75 @@
 .detail-gourmet-container2{
+  padding-top: 10vh;
+  width: 50vw;
+  margin-left: 25vw;
+  margin-right: 25vw;
   justify-content: center;
-  margin-left: 40%;
-  padding-top: 100px;
+}
+
+.show-gourmet-field1 {
+  display: flex;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  align-items: center; /* 縦方向に中央寄せ */
+  border-top: 2px solid #e6e1d4;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.show-gourmet-body1 {
+  color: white;
+  background-color: maroon;
+  text-align: center;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  width: 7vw;
+  height: 4vh;
+  display: flex;
+  align-items: center; /* 縦方向に中央寄せ */
+  justify-content: center; /* 横方向に中央寄せ */
+}
+
+.show-gourmet-photo {
+  width: 40vw;
+  height: 56vh;
+  padding-bottom: 5vh;
+  margin: 0 auto; /* 左右の余白を自動で均等に設定して中央に配置 */
+  display: flex;
+  justify-content: center; /* 横方向に中央寄せ */
+  align-items: center; /* 縦方向に中央寄せ */
+} 
+
+.show-gourmet-like{
+  padding-left: 2vw;
 }
 
 .map-title{
   text-align: center;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center; /* 横方向に中央寄せ */
+  align-items: center; /* 縦方向に中央寄せ */
+  height: 100vh; /* 画面の高さいっぱいに広げる */
+}
+
+#map {
+  height: 600px;
+  width: 50%;
+}
+
+.comment-wrapper1{
+  display: flex;
+  justify-content: center; /* 横方向に中央寄せ */
+  align-items: center; /* 縦方向に中央寄せ */
+  text-align: center;
+}
+
+.edit-postedgourmet{
+  text-decoration:underline;
+}
+
+.detail-gourmet-container2 p{
+  margin-left: 2vw;
 }

@@ -1,0 +1,173 @@
+.DM-page{
+  padding-top: 10vh;
+}
+
+.dmMain{
+  border:1px solid darkgray;
+  text-align: center;
+  background-color: #f4ffff;
+  height: 15vh;
+  padding-top: 5vh;
+}
+
+.dmusername{
+  border:1px solid darkgray;
+  background-color: #f4ffff;
+}
+
+.chat-group-show-talk{
+  background-color: #b7dbff;
+}
+
+.dmmessagebox {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5vh;
+  background-color: #b7dbff;
+}
+
+.left2 {
+  text-align: center; /* テキストを左寄せにする */
+}
+
+/* 以下は見た目を調整するためのスタイルです。必要に応じて調整してください。 */
+/*.left2 h3 {
+  background-color: lightgray;
+}*/
+
+.right{
+  font-size: 30px;
+  width: 30%;
+  height: 50px;
+  margin-bottom: 5%;
+  margin-left: 50%;
+  // flex-direction: row-reverse;
+  position: relative;
+  display: inline-block;
+  //display:flex-end;
+  padding: 10px 20px;
+  background:  #CCFFCC;
+  text-align: left;
+  border-radius: 12px;
+  small{
+    left: 640px;
+}
+}
+.left{
+  font-size: 30px;
+  width: 30%;
+  height: 50px;
+  margin-bottom: 5%;
+  margin-right:50% ;
+  margin-left: 17vw;
+  // flex-direction: row;
+  position: relative;
+display: inline-block;
+display: flex-start;
+padding: 10px 20px;
+background: #CCFFCC;
+text-align: left;
+border-radius: 12px;
+small{
+  right: 640px;
+}
+}
+
+.left::after {
+  content: "";
+  border: 15px solid transparent;
+  border-top-color: #CCFFCC;
+  position: absolute;
+  top: 10px;
+  left: -15px;
+  }
+
+.right::after {
+  content: "";
+  border: 15px solid transparent;
+  border-top-color: #CCFFCC;
+  position: absolute;
+  top: 10px;
+  right: -15px;
+  }
+
+.right-chat{
+  margin-left: 110%;
+}
+.left-chat{
+  margin-right: 120%;
+}
+
+small{
+  position: absolute;
+  top: -20px;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.right1{
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  padding-right: 2vw;
+}
+
+.left1{
+  display: flex;
+  padding-top: 1.5vh;  
+  padding-bottom: 1.5vh;
+}
+
+.dmmessage-body-left{
+  width: 30%;
+  height: 50px;
+  background:  white;
+  text-align: left;
+  border-radius: 12px;
+  display: inline-block;
+  position: relative; 
+  padding: 10px;
+}
+
+.dmmessage-body-left:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 3px; 
+  left: -19px;
+  border: 8px solid transparent;
+  border-right: 18px solid white;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+
+.dmmessage-body-right{
+  width: 30%;
+  height: 50px;
+  background:  #CCFFCC;
+  text-align: left;
+  border-radius: 12px;
+  display: inline-block;
+  position: relative; 
+  padding: 10px;
+}
+
+.dmmessage-body-right:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 3px; 
+  right: -19px;
+  border: 8px solid transparent;
+  border-right: 18px solid #CCFFCC;
+  -webkit-transform: rotate(145deg);
+  transform: rotate(145deg);
+}
+
+.chat-group-show-talk1{
+  background-color: #b7dbff;
+  height:60vh;
+}

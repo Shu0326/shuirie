@@ -15,7 +15,7 @@
   <div class="header-nav">
     <nav><%= link_to "Home", gourmets_top_path %></nav>
     <nav><%= link_to "Search", gourmets_path %></nav>
-    <nav><%= link_to "Test", new_test_path %></nav>
+    <nav><%= link_to "Test", new_test_path %></nav> 
     <nav><%= link_to "POST", new_gourmet_path %></nav>
     <% if user_signed_in? %>
     <nav><%= link_to "Mypage", user_path(current_user.id) %></nav>
@@ -34,6 +34,6 @@
   </main>
   
   <footer>
-    <p>Copyright © GeekSalon All Rights Reserved.</p>
+    <p>Copyright © Shu Irie All Rights Reserved.</p>
   </footer>
   </body>

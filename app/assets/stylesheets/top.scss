@@ -3,6 +3,7 @@
   padding: 0;
 }
 
+/*
 .top-title {
   font-size: 80px;
   font-family: 'Kaushan Script', cursive;
@@ -14,10 +15,12 @@
   left: 70%;
   transform: translate(-50%,-50%);
 }
+*/
 
 /*
 右から左へ
 ----------------------------*/
+/*
 @keyframes infinity-scroll-left {
   from {
     transform: translateX(0);
@@ -25,21 +28,27 @@
   to {
     transform: translateX(-100%);
   }
-}
+}*/
 
 /*
 IE11対策
 ----------------------------*/
+/*
 _:-ms-lang(x)::-ms-backdrop,
 .d-demo {
   display: -ms-grid;
   overflow: hidden;
-}
+}*/
 /*----------------------------*/
+/*
+.d-demo__item1{
+  display: flex;
+  flex-direction: column;
+}
 
 .d-demo{
   height: 680px;
-  margin-top: 2.5%;
+  background-color: whitesmoke;
 }
 
 .d-demo__wrap {
@@ -57,6 +66,7 @@ _:-ms-lang(x)::-ms-backdrop,
 .d-demo__list--left{
 animation :infinity-scroll-left 40s infinite linear 0.1s both;
 }
+*/
 
 /*
 .d-demo__item {
@@ -69,7 +79,7 @@ animation :infinity-scroll-left 40s infinite linear 0.1s both;
 
 .slide-image {
   width: auto;
-  height: 680px;
+  height: 90vh;
   margin-right: 20px;
 }
 
@@ -86,24 +96,26 @@ animation :infinity-scroll-left 40s infinite linear 0.1s both;
   margin: 100px;
 }
 */
-
+/*
 .top-title-container {
   margin-top: 35px;
   text-align: center;
   background-color: whitesmoke;
 }
+*/
 
+/*
 h1 {
   font-size: 60px;
   font-family: serif;
   color: #444;
 }
+*/
 /*   First block End   */
 
 /*   Second block   */
 .second-block {
-  background-color: whitesmoke;
-  text-align: center;
+  background-color: #f4ffff;
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -134,9 +146,8 @@ h1 {
 
 /*   Third block Start   */
 .third-block {
-  background-color: whitesmoke;
+  background-color:  #f4ffff;
   text-align: center;
-  padding-top: 100px;
   padding-bottom: 100px;
 }
 
@@ -179,4 +190,99 @@ footer{
 
 b {
   font-size: 40px;
+}
+
+/*
+.top-about1-container{
+  display: flex;
+  justify-content: center;
+}
+
+.top-about1-right{
+  width: 50vw;
+  margin: 0 0 0 0px;
+  padding: 0;
+}
+*/
+
+.top-about1-photo{
+  width: 50vw; /*画像サイズ指定*/
+  margin-right: 0vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.top-about-image1{
+  width: 50vw;
+}
+
+.top-about1-title {
+  margin: 0;
+  padding-top: 30px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.top-about1-detail{
+  margin: 5vh 5vw;
+  padding: 0;
+  font-size: 20px;
+}
+
+.top-about1-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-about1-right {
+  width: 50vw; /* 文章が広がりすぎないように制限 */
+}
+
+
+.top-about2-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-about2-photo{
+  width: 50vw; /*画像サイズ指定*/
+  margin-right: 0vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.top-about-image2{
+  width: 50vw;
+}
+
+.top-about2-right{
+  width: 50vw; /* 文章が広がりすぎないように制限 */
+}
+
+.top-about2-title {
+  margin: 0;
+  padding-top: 30px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.top-about2-detail{
+  margin: 5vh 6vw;
+  padding: 0;
+  font-size: 20px;
+}
+
+.video-content-top{
+  width: 95vw;
+  height: 100vh;
+}
+
+.top-top{
+text-align: center;
+width: 100%;
+position: relative;
+padding-top: 50px;
+background-color: #f4ffff;
 }

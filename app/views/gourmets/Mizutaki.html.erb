@@ -1,0 +1,92 @@
+<div class="slideBox">
+  <div class="title">水炊き</div>
+    <div class="slider">
+      <div class="slider_fade">
+        <%= image_tag "Mizutaki1.jpg", class:"slider_image" %>
+        <%= image_tag "Mizutaki2.jpg", class:"slider_image" %>
+        <%= image_tag "Mizutaki3.jpg", class:"slider_image" %>
+        <%= image_tag "Mizutaki4.jpg", class:"slider_image" %>
+        <%= image_tag "Fukuoka.jpg", class:"slider_image" %>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+<div class="Mizutaki-pagenation">
+<%= page_entries_info @Mizutaki %>
+<%= paginate @Mizutaki %>
+<div>
+
+
+<div class="Mizutakibox1">
+<% @Mizutaki.each do |t| %>
+  <div class="Mizutakibox2">
+  <!--
+    <%= image_tag t.user.image_url, class:"user_img1", style: "border-radius: 50%; width: 100px; height: 100px; object-fit:cover;" %>
+  -->
+
+    <div class="Mizutaki-gourmets-container1">
+      <%= image_tag t.image_url, class:"Mizutaki-index-photo" if t.image? %>
+      <br>
+      <div class="Mizutaki-field1">
+        <div class="Mizutaki-body1">
+        店名
+        </div>
+        <div class="Mizutaki-body2">
+        <%= t.shop_name %>
+        </div>
+      </div>
+
+      <div class="Mizutaki-field1">
+        <div class="Mizutaki-body1">
+        価格
+        </div>
+        <div class="Mizutaki-body2">
+        <%= t.price %>
+        </div>
+      </div>
+
+      <div class="Mizutaki-field1">
+        <div class="Mizutaki-body1">
+          総合評価
+        </div>
+        <div class="Mizutaki-body2">
+          <div class="star-rating">
+            <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+          </div> 
+        </div>
+      </div>
+
+      <!--<%= link_to "詳細", gourmet_path(t.id) %>
+      <br>
+      <%= link_to t.user.name, user_path(t.user.id) %>
+      <%= t.created_at %> -->
+
+      <div class="Mizutaki-field2">
+      <% if user_signed_in? %>
+        <% if current_user.already_liked?(t) %>
+          <%= link_to gourmet_like_path(id: t.id, gourmet_id: t.id), method: :delete do %>
+          <i class="fas fa-heart"></i><%= t.likes.count %>
+          <% end %>
+        <% else %>
+          <%= link_to gourmet_likes_path(id: t.id, gourmet_id: t.id), method: :gourmet do %>
+          <i class="fas fa-heart"></i><%= t.likes.count %>
+          <% end %>
+        <% end %>
+      <% else %>
+        <i class="fas fa-heart"></i><%= t.likes.count %>
+      <% end %>
+
+      <br>
+
+      <% if user_signed_in? && current_user.id == t.user_id %>
+        <%= link_to "編集", edit_gourmet_path(t.id) %>
+        <%= link_to "削除", gourmet_path(t.id), method: :delete %>
+      <% end %> 
+      </div>
+    </div>  
+  </div>  
+<% end %>
+</div>

@@ -1,38 +1,50 @@
+<div class="Hokkaido-all">
 <div class="slideBox">
   <div class="title">Hokkaido</div>
-    <%= image_tag "Hokkaido.jpg", class:"item2" %>
-    <%= image_tag "Hokkaido2.avif", class:"item2" %>
-    <%= image_tag "Hokkaido3.avif", class:"item2" %>
-    <%= image_tag "Hokkaido4.webp", class:"item2" %>
-    <%= image_tag "Hokkaido5.jpg", class:"item2" %>
+    <div class="slider">
+      <div class="slider_fade">
+      <%= image_tag "Hokkaido.jpg", class:"item2" %>
+      <%= image_tag "Hokkaido2.avif", class:"item2" %>
+      <%= image_tag "Hokkaido3.avif", class:"item2" %>
+      <%= image_tag "Hokkaido4.webp", class:"item2" %>
+      <%= image_tag "Hokkaido5.jpg", class:"item2" %>
+      </div>
+    </div>
   </div>
-</div>
+  </div>
 
-
-  <div class="Hokkaido-intro-container2">
-
+  <div class="Hokkaido-intro-container1">
     <div class="d-demo-Hokkaido">
       <div class="d-demo__wrap-Hokkaido">
         <div class="d-demo__list-Hokkaido d-demo__list--left-Hokkaido">
-          <div class="d-demo__item-Hokkaido"><%= image_tag "Ginghiskhan11.jpg", class:"slide-image1" %></div>
-          <div class="d-demo__item-Hokkaido"><%= image_tag "Kaisendon1.jpg", class:"slide-image1" %></div>
-          <div class="d-demo__item-Hokkaido"><%= image_tag "Edomaemonzya.jpg", class:"slide-image1" %></div>
-          <div class="d-demo__item-Hokkaido"><%= image_tag "Edomaezushi1.jpg", class:"slide-image1" %></div>
-          <div class="d-demo__item-Hokkaido"><%= image_tag "Monzyayaki1.jpg", class:"slide-image1" %></div>
-          <div class="d-demo__item-Hokkaido"><%= image_tag "Takoyaki1.jpg", class:"slide-image1" %></div>
+          <div class="d-demo__item-Hokkaido"><%= image_tag "Ginghiskhan1.jpg", class:"slide-image0" %></div>
+          <div class="d-demo__item-Hokkaido"><%= image_tag "softkaisendon.jpg", class:"slide-image0" %></div>
+          <div class="d-demo__item-Hokkaido"><%= image_tag "Sappororamen1.jpg", class:"slide-image0" %></div>
+          <div class="d-demo__item-Hokkaido"><%= image_tag "zyagacheese.jpg", class:"slide-image0" %></div>
+          <div class="d-demo__item-Hokkaido"><%= image_tag "Kaisendon2.jpg", class:"slide-image0" %></div>
         </div>
       </div>
     </div>
 
+
   <div class="Hokkaido-intro">
     <div class="Hokkaido-intro-detail">
-    <p>北海道についての詳細
+    <p>北海道のグルメは、大自然の中で育まれた素材から</p>
     <br>
-    北海道についての詳細2</p>
+    <p>生み出される特別な味わいが魅力です。</p>
+    <br>
+    <p>その恵まれた環境が生み出す料理は、地元の伝統と</p>
+    <br>
+    <p>クリエイティビティが融合した絶品ばかり。</p>
+    <br>
+    <p>大自然からの贈り物を味わい、</p>
+    <br>
+    <p>豊かな食の体験を楽しむことができます。</p>
     </div>
 
     <div class="Hokkaido-intro-title">
-    <p>北海道</p>
+    <p>大地からの贈り物、</p>
+    <p>極上の食体験</p>
     </div>
   </div>
 
@@ -45,22 +57,42 @@
 
 <div class="Hokkaido-gourmet1-container">
   <div class="Hokkaido-gourmet1-photo">
-  <%= image_tag "Ginghiskhan11.jpg", class:"slide-image2" %>
+    <%= image_tag "Ginghiskhan1.jpg", class:"slide-image1" %>
   </div>
 
   <div class="Hokkaido-gourmet1-right">
     <div class="Hokkaido-gourmet1-title">
     ジンギスカン
     </div>
-    <div class="Hokkaido-gourmet1-detail">
-    ジンギスカンについて
+
+    <div class="Hokkaido-gourmet1-catch">
+    <h3>北の風が肉に宿る、大地の味覚</h3>
     </div>
-    <div class="Hokkaido-gourmet1-link">
-      <%= link_to "ジンギスカンのお店はこちら", gourmets_Ginghiskhan_path %>
+
+    
+    <div class="Hokkaido-gourmet1-detail">
+    <p>北海道のジンギスカンは、草原の風を感じながら味わう贅沢な一皿。</p>
+    <br>
+    <p>この料理は、北海道が誇る美味しいラム肉や羊肉を、</p>
+    <br>
+    <p>特製のソースで焼き上げたもので、その香りと風味は一度試す価値あり。</p>
+    <br>
+    <p>ジンギスカンはその名前をモンゴルの偉大な征服者、ジンギスカンから採りました。</p>
+    <br>
+    <p>北海道に訪れた際には、その風味豊かなジンギスカンをぜひ試して、</p>
+    <br>
+    <p>北海道の誇りを味わってください。</p>
+    </div>
+
+    <div class="hover11">
+      <div class="hover">
+        <div class="Hokkaido-gourmet1-link">
+          <%= link_to "ジンギスカンのお店はこちら", gourmets_Ginghiskhan_path %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
 
 <div class="Hokkaido-gourmet2-container">
   <div class="Hokkaido-gourmet2-right">
@@ -68,57 +100,106 @@
     海鮮丼
     </div>
 
-    <div class="Hokkaido-gourmet2-detail">
-    海鮮丼について
+    <div class="Hokkaido-gourmet2-catch">
+    <h3>海の恵みが舌で踊る、北海道の至福</h3>
     </div>
 
-    <div class="Hokkaido-gourmet2-link">
-      <%= link_to "海鮮丼のお店はこちら", gourmets_Kaisendon_path %>
+    <div class="Hokkaido-gourmet2-detail">
+    <p>北海道の海鮮丼は、新鮮な海の幸が豪快に盛り付けられた絶品料理です。</p>
+    <br>
+    <p>この地域は寒流と暖流が交わるため、多彩な魚介類が獲れ、特にホタテ、イクラ、</p>
+    <br>
+    <p>ウニ、ズワイガニなどが絶品です。北海道は日本一広い島で、長い海岸線から</p>
+    <br>
+    <p>新鮮な海産物に恵まれ、寒冷な海域で育つ魚介類は脂がのっており、風味は格別。</p>
+    <br>
+    <p>ご飯の上にこれらの贅沢な海の幸が美しく並び、一口食べれば虜になります。</p>
+    </div>
+
+    <div class="hover12">
+      <div class="hover">
+        <div class="Hokkaido-gourmet2-link">
+          <%= link_to "海鮮丼のお店はこちら", gourmets_Kaisendon_path %>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="Hokkaido-gourmet2-photo">
-    <%= image_tag "Kaisendon1.jpg", class:"slide-image2" %>
+    <%= image_tag "Kaisendon1.jpg", class:"slide-image1" %>
   </div>
 </div>
 
 <div class="Hokkaido-gourmet1-container">
   <div class="Hokkaido-gourmet1-photo">
-  <%= image_tag "Sappororamen1.jpg", class:"slide-image2" %>
+  <%= image_tag "Sappororamen1.jpg", class:"slide-image1" %>
   </div>
 
   <div class="Hokkaido-gourmet1-right">
     <div class="Hokkaido-gourmet1-title">
     札幌ラーメン
     </div>
-    <div class="Hokkaido-gourmet1-detail">
-    札幌ラーメンについて
+
+    <div class="Hokkaido-gourmet1-catch">
+    <h3>北海道の魂、一杯に凝縮</h3>
     </div>
-    <div class="Hokkaido-gourmet1-link">
-      <%= link_to "札幌ラーメンのお店はこちら", gourmets_Sappororamen_path %>
+
+    <div class="Hokkaido-gourmet1-detail">
+    <p>北海道の札幌ラーメンは、日本全国で愛されるラーメンの一つです。</p>
+    <br>
+    <p>特徴的なのは、濃厚でこってりとした味わいの豚骨スープと、太い中太麺。</p>
+    <br>
+    <p>雪国ならではの寒さに負けない、ホッと温かさがあります。</p>
+    <br>
+    <p>また、ラーメンのトッピングとして、バターコーンやもやしを添えることも。</p>
+    <br>
+    <p>これは、農産物が豊富な北海道の恵みを感じさせる一品です。</p>
+    <br>
+    <p>札幌ラーメンを食べれば、北海道の風土や文化も味わえます。</p>
+    </div>
+
+    <div class="hover13">
+      <div class="hover">
+        <div class="Hokkaido-gourmet1-link">
+          <%= link_to "札幌ラーメンのお店はこちら", gourmets_Sappororamen_path %>
+        </div>
+      </div>    
     </div>
   </div>
 </div>
 
-
 <div class="Hokkaido-gourmet2-container">
   <div class="Hokkaido-gourmet2-right">
     <div class="Hokkaido-gourmet2-title">
-    北海道の他のご当地グルメ
+    その他
     </div>
 
     <div class="Hokkaido-gourmet2-detail">
-    北海道の他のご当地グルメについて
+    <p>冬には雪まつりが開催され、アイススカルプチャーや</p>
+    <br>
+    <p>屋台のグルメを堪能できます。一方、夏には新鮮な野菜や果物、</p>
+    <br>
+    <p>ジャガイモを使用した料理が広がります。乳製品も自慢で、バターやチーズ、</p>
+    <br>
+    <p>アイスクリームなどが美味しいです。地元産の食材を活かした料理は、</p>
+    <br>
+    <p>北海道ならではの風味と美味しさを堪能できるでしょう。</p>
     </div>
 
-    <div class="Hokkaido-gourmet2-link">
-      <%= link_to "その他のお店はこちら", gourmets_Hokkaidoelse_path %>
+    <div class="hover14">
+      <div class="hover">
+        <div class="Hokkaido-gourmet2-link">
+          <%= link_to "その他のお店はこちら", gourmets_Hokkaidoelse_path %>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="Hokkaido-gourmet2-photo">
-    <%= image_tag "Kaisendon1.jpg", class:"slide-image2" %>
+    <%= image_tag "Hokkaidoelse1.jpg", class:"slide-image1" %>
   </div>
+</div>
+
 </div>
 
 <!--

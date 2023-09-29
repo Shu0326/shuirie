@@ -92,13 +92,6 @@
   }
 }
 
-.Hokkaido-intro-container2{
-  display: flex;
-  padding-top: 30px;
-  padding-left: 30px;
-  z-index: -10;
-}
-
 /*
 右から左へ
 ----------------------------*/
@@ -118,25 +111,22 @@ _:-ms-lang(x)::-ms-backdrop,
 .d-demo-Hokkaido {
   display: -ms-grid;
   overflow: hidden;
-  height: 300px;
-  width: 640px;
+  height: 60vh;
+  width: 50vw;
   margin-top: 2.5%;
-
 }
 /*----------------------------*/
-
-
 
 .d-demo__wrap-Hokkaido {
   display: flex;
   overflow: hidden;
-  width: 640px;
+  width: 50vw;
 }
 
 .d-demo__list-Hokkaido {
   display: flex;
   list-style: none;
-  height: 300px;
+  height: 60vh;
   justify-content: center;
 }
 
@@ -153,16 +143,30 @@ animation :infinity-scroll-left 40s infinite linear 0.1s both;
 }
 */
 
-.slide-image1 {
-  width: auto;
-  height: 300px;
+.slide-image0 {
+  height: 60vh;
   margin-right: 20px;
 }
 
+.slide-image1{
+  border-radius: 40px/60px ; 
+  width:40vw;
+  height: 60vh;
+}
+
+.Hokkaido-intro-container1{
+  display: flex;
+  padding-top: 30px;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  height: 60vh;
+  background-color: #f4ffff;
+}
+
 .Hokkaido-intro{
-margin: 0 0 0 20px;
 padding: 0;
 display: flex;
+width: 40vw;
 }
 
 .Hokkaido-intro-title{
@@ -170,9 +174,18 @@ display: flex;
 writing-mode: vertical-rl;
 }
 
+.Hokkaido-intro-title p{
+  font-weight: bold;
+  font-size: 35px;
+  font-family: serif;
+}
+
 .Hokkaido-intro-detail{
 -ms-writing-mode: tb-rl;
 writing-mode: vertical-rl;
+margin-left: 4vw;
+margin-right: 4vw;
+width: 20vw;
 }
 
 
@@ -181,83 +194,128 @@ writing-mode: vertical-rl;
   padding-top: 30px;
   padding-bottom: 30px;
   font-weight: bold;
+  font-size: 30px;
+  background-color: #f4ffff;
 }
 
 .Hokkaido-gourmet1-container{
   display: flex;
   justify-content: center;
-  padding-bottom: 100px;
+  padding-left: 7.5vw;
+  padding-right: 7.5vw;
+  padding-bottom: 10vw;
+  background-color: #f4ffff;
 }
 
 .Hokkaido-gourmet1-photo{
-  width: 50%; /*画像サイズ指定*/
+  width: 40vw;
   margin: 0;
   overflow: hidden;
   position: relative;
-  /*left:5%;*/
+  display: flex;
+  justify-content: center; /* 水平方向に中央配置 */
+  align-items: center; /* 垂直方向に中央配置 */
 }
 
+
 .Hokkaido-gourmet1-right{
-  margin: 0 0 0 20px;
+  margin-left: 2vw;
   padding: 0;
+  width: 40vw;
 }
 
 .Hokkaido-gourmet1-title {
   margin: 0;
-  padding-top: 30px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 30px;
+}
+
+.Hokkaido-gourmet1-catch{
+  padding-top: 1vh;
+  padding-bottom: 3vh;
+}
+
+.Hokkaido-gourmet1-catch h3{
+  color: #444;
+  font-size: 20px;
 }
 
 .Hokkaido-gourmet1-detail{
-  margin: 10px 0 0;
   padding: 0;
+}
+
+.Hokkaido-gourmet1-link{
+  padding-top:6vh;
+  font-size: 20px;
+}
+
+
+.Hokkaido-gourmet1-link a{
+  color: #333333;
+  font-weight: 500;
 }
 
 .Hokkaido-gourmet2-container{
   display: flex;
   justify-content: center;
-  padding-bottom: 100px;
+  padding-left: 7.5vw;
+  padding-right: 7.5vw;
+  padding-bottom: 10vw;
+  background-color: #f4ffff;
 }
 
 .Hokkaido-gourmet2-photo{
-  width: 50%; /*画像サイズ指定*/
-  margin: 0;
+  width: 40vw;
+  margin-left: 3vw;
   overflow: hidden;
   position: relative;
-  /*left:15%;*/
+  display: flex;
+  justify-content: center; /* 水平方向に中央配置 */
+  align-items: center; /* 垂直方向に中央配置 */
 }
 
+
 .Hokkaido-gourmet2-right{
-  margin: 0 0 0 20px;
+  margin-left: 2vw;
   padding: 0;
+  width: 40vw;
 }
 
 .Hokkaido-gourmet2-title {
   margin: 0;
-  padding-top: 30px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 30px;
+}
+
+.Hokkaido-gourmet2-catch{
+  padding-top: 1vh;
+  padding-bottom: 3vh;
+}
+
+.Hokkaido-gourmet2-catch h3{
+  color: #444;
+  font-size: 20px;
 }
 
 .Hokkaido-gourmet2-detail{
-  margin: 10px 0 0;
   padding: 0;
 }
 
+.Hokkaido-gourmet2-link{
+  padding-top:6vh;
+  font-size: 20px;
+  width: 15vw;
+}
 
-
-
-/*
 .hover {
   padding-bottom: 5px;
   position: relative;
 }
 
 .hover::before {
-  background: #ff701e;
+  background: red;
   content: '';
-  width: 10%;
+  width: 18vw;
   height: 2px;
   position: absolute;
   left: 0;
@@ -267,16 +325,29 @@ writing-mode: vertical-rl;
   transform: scale(0, 1);
   transition: transform .3s;
 }
+
 .hover:hover::before {
   transform-origin: left top;
   transform: scale(1, 1);
+  width: 100%;
 }
 
-.hover2{
-  width:100%
+.hover11{
+  width: 17vw;
 }
-*/
 
-.slide-image2{
-  border-radius: 40px/60px ; 
+.hover12{
+  width: 13vw;
 }
+
+.hover13{
+  width: 17vw;
+}
+
+.hover14{
+  width: 13vw;
+}
+
+
+
+

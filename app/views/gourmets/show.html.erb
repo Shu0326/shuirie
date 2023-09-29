@@ -1,44 +1,103 @@
-
-<% @gourmet.tags.each do |tag| %>
-  <%= tag.name %>
-<% end %>
-
+<div class="detail-gourmet-container">
 <div class="detail-gourmet-container1">
   <div class="detail-gourmet-container2">
-  <%= image_tag @gourmet.image_url, size: "250x200" if @gourmet.image? %>
-    <p>ご当地グルメ：<%= @gourmet.food %></p>
-    <p>店名：<%= @gourmet.shop_name %></p>
-    <p>価格：<%= @gourmet.price %></p>
-    <p>住所：<%= @gourmet.addres %></p>
-    <p>詳細：<%= @gourmet.about_shop %></p>
-  
-  <div>
-  <h2>総合評価：
-  <span class="star-rating">
-  <span class="star-rating-front" style="width: <%= getPercent(@gourmet.overall) %>%;">★★★★★</span>
-  <span class="star-rating-back">★★★★★</span>
-  </span> 
-  </h2>
-  </div>
-  
-  <p><%= @gourmet.created_at %></p>
-  
-</div>  
+    <%= image_tag @gourmet.image_url, class:"show-gourmet-photo" %>
+    
+    <div class="show-gourmet-field1">
+      <div class="show-gourmet-body1">
+      ご当地グルメ
+      </div>
+      <div class="show-gourmet-body2">
+      <%= @gourmet.food %>
+      </div>
+    </div>
 
-<br>
+    <div class="show-gourmet-field1">
+      <div class="show-gourmet-body1">
+      店名
+      </div>
+      <div class="show-gourmet-body2">
+      <%= @gourmet.shop_name %>
+      </div>
+    </div>
+
+    <div class="show-gourmet-field1">
+      <div class="show-gourmet-body1">
+      価格
+      </div>
+      <div class="show-gourmet-body2">
+      <%= @gourmet.price %>
+      </div>
+    </div>
+
+    <div class="show-gourmet-field1">
+      <div class="show-gourmet-body1">
+      住所
+      </div>
+      <div class="show-gourmet-body2">
+      <%= @gourmet.addres %>
+      </div>
+    </div>
+
+    <div class="show-gourmet-field1">
+      <div class="show-gourmet-body1">
+      詳細
+      </div>
+      <div class="show-gourmet-body2">
+      <%= @gourmet.about_shop %>
+      </div>
+    </div>
+  
+    <div class="show-gourmet-field1">
+      <div class="show-gourmet-body1">
+        総合評価
+      </div>
+      <div class="show-gourmet-body2">
+        <div class="star-rating">
+          <span class="star-rating-front" style="width: <%= getPercent(@gourmet.overall) %>%;">★★★★★</span>
+          <span class="star-rating-back">★★★★★</span>
+        </div> 
+      </div>
+    </div>
+
+    <div class="show-gourmet-field1">
+      <div class="show-gourmet-body1">
+      投稿者
+      </div>
+      <div class="show-gourmet-body2">
+      <%= link_to @gourmet.user.name, user_path(@gourmet.user.id) %>
+      </div>
+    </div>
+    
+    <p><%= @gourmet.created_at %></p>
+
+    <div class=show-gourmet-like>
+    <% if user_signed_in? %>
+      <% if current_user.already_liked?(@gourmet) %>
+      <%= link_to gourmet_like_path(@gourmet), method: :delete do %>
+        <i class="fas fa-heart"></i><%= @gourmet.likes.count %>
+      <% end %>
+    <% else %>
+      <%= link_to gourmet_likes_path(@gourmet), method: :post do %>
+      <i class="fas fa-heart"></i><%= @gourmet.likes.count %>
+      <% end %>
+    <% end %>
+    <% else %>
+      <i class="fas fa-heart"></i><%= @gourmet.likes.count %>
+    <% end %>
+    </div>
+  </div>
+</div>  
 
 <div class="map-title">
   <h2>Map</h2>
 </div>
 
+<div class="map-wrapper">
+<div class="map-container">
 <div id='map'></div>
-
-<style>
-#map {
-  height: 600px;
-  width: 100%;
-}
-</style>
+</div>
+</div>
 
 <!-- js部分 -->
 <script>
@@ -61,46 +120,34 @@ function initMap(){
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5YiQlX3PMEI7d7V-aL41HctWXVVCe8oU
 &callback=initMap" async defer></script>
-  
-  <% if user_signed_in? %>
-    <% if current_user.already_liked?(@gourmet) %>
-      <%= link_to gourmet_like_path(@gourmet), method: :delete do %>
-      <i class="fas fa-heart"></i><%= @gourmet.likes.count %>
-    <% end %>
-  <% else %>
-    <%= link_to gourmet_likes_path(@gourmet), method: :post do %>
-    <i class="fas fa-heart"></i><%= @gourmet.likes.count %>
-    <% end %>
-  <% end %>
-  <% else %>
-    <i class="fas fa-heart"></i><%= @gourmet.likes.count %>
-  <% end %>
 
+<!--
 <h2>いいねしたユーザー</h2>
 <% @gourmet.liked_users.each do |user| %>
   <li><%= user.email %></li>
 <% end %>
+-->
 
-  <div class="comment-wrapper">
+<div class="comment-wrapper1">
+  <div class="comment-wrapper2">
     <p>コメント一覧</p>
     <% @comments.each do |c| %>
       <div>
         <%= c.user.email unless c.user.blank? %>
-        <br>
         <%= c.content %>
       </div>
-      <br>
     <% end %>
 
     <% if user_signed_in? %>
       <%= form_with(model: [@gourmet, @comment], local: true) do |f| %>
       <%= f.text_area :content %>
+      <br>
         <%= button_tag type: "submit" do %>
-          <i class="far fa-comments"></i> コメントする
+          <i class="far fa-comments"></i> 送信
         <% end %>
       <% end %>
     <% end %>
-
+    <br>
+    <%= link_to "編集", edit_gourmet_path(@gourmet.id), class: "edit-postedgourmet" %>
   </div>
-    <%= link_to "編集", edit_gourmet_path(@gourmet.id) %>
-  </div>
+</div>

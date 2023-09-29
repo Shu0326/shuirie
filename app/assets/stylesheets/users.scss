@@ -3,11 +3,11 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .mypage{
-  background-color: whitesmoke;
+  background-color: #f4ffff;
 }
 
 .mypage2{
-  background-color: whitesmoke;
+  background-color: #f4ffff;
 }
 
 .photo-mypage{
@@ -42,7 +42,7 @@
 .name {
   padding: 10px 10px;
   position: relative;
-  border: 1px solid lightblue;
+  border: 1px solid #f4ffff;
   background-color: lightcoral;
   border: dotted 6px lightcyan;
   width: 30%;
@@ -64,7 +64,7 @@
   border-radius: 50%;
   object-fit: cover;
   border: solid 2px;
-  background-color: lightgoldenrodyellow;
+  
 }
 
 .mypage-profile{
@@ -72,6 +72,9 @@
   justify-content: center;
   padding-top: 20px;
   padding-bottom: 20px;
+  width:50vw;
+  margin-left: 25vw;
+  margin-right: 25vw;
 }
 
 .mypage-like{
@@ -189,4 +192,14 @@ input[name="tab_item"] {
   width:95%;
   height: 30vh;
   margin: 1.25%;
+}
+
+/*
+.user-in p{
+  text-decoration:underline;
+}
+*/
+
+.mypage_username{
+  font-size: 30px;
 }

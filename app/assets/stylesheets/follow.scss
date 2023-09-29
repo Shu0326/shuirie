@@ -1,0 +1,33 @@
+.follow-box{
+  padding-top: 10vh;
+  height: 100vh;
+  background-color: #f4ffff;
+}
+
+.index-follow-top{
+  text-align: center;
+  border-top: solid darkgray 2px;
+  border-bottom: solid darkgray 2px;
+  font-size: 20px;
+}
+
+.follow_name{
+  display: flex;
+  padding:1vh 1vw;
+}
+
+.follow_name1{
+  padding-left: 1vw;
+}
+
+.follow_username{
+  font-size: 30px;
+}
+
+.index-follow{
+  width: 24vw;
+  height: 30vh;
+  margin: 4vh 4vw;
+  border: solid 2px;
+  border-radius: 20px/30px ; 
+}

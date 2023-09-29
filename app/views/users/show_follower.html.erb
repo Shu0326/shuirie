@@ -1,9 +1,31 @@
+<div class="follower-box">
+
+<div class="index-follower-top">
+followers
+</div>
+
+<div class="index-follower">
 <% @user.followers.each do |user| %>
-<table>
-<tr>
-    <td>  <%= user.name %> </td>
-    <td><%= link_to '詳細', user_path(user) %></td>
-</tr>
-    
-</table>
+
+
+  <div class="follower_name">
+    <div class="follower_user_img">
+      <%= image_tag user.image_url, style: "border-radius: 50%; width: 100px; height: 100px; object-fit:cover;", size: "250x200" if @user.image?  %>
+    </div>
+
+    <div class="follower_name1">
+      <p>Name</p>
+      <div class="follower_username">
+        <%= link_to user.name, user_path(user) %>
+      </div>
+    </div>
+  </div>
+
+  
+  <p>プロフィール : <%= @user.profile %></p>
+  <br>
+
 <% end %>
+</div>
+
+</div>
