@@ -10,54 +10,48 @@
       </div>
     </div>
   </div>
-  </div>
-
+</div>
 
 <div class="Hokkaidoelse-pagenation">
 <%= page_entries_info @Hokkaidoelse %>
 <%= paginate @Hokkaidoelse %>
 <div>
 
-
 <div class="Hokkaidoelsebox1">
-<% @Hokkaidoelse.each do |t| %>
-  <div class="Hokkaidoelsebox2">
-  <!--
-    <%= image_tag t.user.image_url, class:"user_img1", style: "border-radius: 50%; width: 100px; height: 100px; object-fit:cover;" %>
-  -->
+  <% @Hokkaidoelse.each do |t| %>
+    <div class="Hokkaidoelsebox2">
+      <div class="Hokkaidoelse-gourmets-container1">
+        <%= image_tag t.image_url, class:"Hokkaidoelse-index-photo" if t.image? %>
+        <br>
+        <div class="Hokkaidoelse-field1">
+          <div class="Hokkaidoelse-body1">
+            店名
+          </div>
+          <div class="Hokkaidoelse-body2">
+            <%= t.shop_name %>
+          </div>
+        </div>
 
-    <div class="Hokkaidoelse-gourmets-container1">
-      <%= image_tag t.image_url, class:"Hokkaidoelse-index-photo" if t.image? %>
-      <br>
-      <div class="Hokkaidoelse-field1">
-        <div class="Hokkaidoelse-body1">
-        店名
+        <div class="Hokkaidoelse-field1">
+          <div class="Hokkaidoelse-body1">
+            価格
+          </div>
+          <div class="Hokkaidoelse-body2">
+            <%= t.price %>
+          </div>
         </div>
-        <div class="Hokkaidoelse-body2">
-        <%= t.shop_name %>
-        </div>
-      </div>
 
-      <div class="Hokkaidoelse-field1">
-        <div class="Hokkaidoelse-body1">
-        価格
+        <div class="Hokkaidoelse-field1">
+          <div class="Hokkaidoelse-body1">
+            総合評価
+          </div>
+          <div class="Hokkaidoelse-body2">
+            <div class="star-rating">
+              <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
+              <span class="star-rating-back">★★★★★</span>
+            </div> 
+          </div>
         </div>
-        <div class="Hokkaidoelse-body2">
-        <%= t.price %>
-        </div>
-      </div>
-
-      <div class="Hokkaidoelse-field1">
-        <div class="Hokkaidoelse-body1">
-          総合評価
-        </div>
-        <div class="Hokkaidoelse-body2">
-          <div class="star-rating">
-            <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
-            <span class="star-rating-back">★★★★★</span>
-          </div> 
-        </div>
-      </div>
 
       <!--<%= link_to "詳細", gourmet_path(t.id) %>
       <br>
@@ -65,28 +59,27 @@
       <%= t.created_at %> -->
 
       <div class="Hokkaidoelse-field2">
-      <% if user_signed_in? %>
-        <% if current_user.already_liked?(t) %>
-          <%= link_to gourmet_like_path(id: t.id, gourmet_id: t.id), method: :delete do %>
-          <i class="fas fa-heart"></i><%= t.likes.count %>
+        <% if user_signed_in? %>
+          <% if current_user.already_liked?(t) %>
+            <%= link_to gourmet_like_path(id: t.id, gourmet_id: t.id), method: :delete do %>
+              <i class="fas fa-heart"></i><%= t.likes.count %>
+            <% end %>
+          <% else %>
+            <%= link_to gourmet_likes_path(id: t.id, gourmet_id: t.id), method: :gourmet do %>
+              <i class="fas fa-heart"></i><%= t.likes.count %>
+            <% end %>
           <% end %>
         <% else %>
-          <%= link_to gourmet_likes_path(id: t.id, gourmet_id: t.id), method: :gourmet do %>
           <i class="fas fa-heart"></i><%= t.likes.count %>
-          <% end %>
         <% end %>
-      <% else %>
-        <i class="fas fa-heart"></i><%= t.likes.count %>
-      <% end %>
-
       <br>
 
-      <% if user_signed_in? && current_user.id == t.user_id %>
-        <%= link_to "編集", edit_gourmet_path(t.id) %>
-        <%= link_to "削除", gourmet_path(t.id), method: :delete %>
-      <% end %> 
-      </div>
+          <% if user_signed_in? && current_user.id == t.user_id %>
+            <%= link_to "編集", edit_gourmet_path(t.id) %>
+            <%= link_to "削除", gourmet_path(t.id), method: :delete %>
+          <% end %> 
+        </div>
+      </div>  
     </div>  
-  </div>  
-<% end %>
+  <% end %>
 </div>

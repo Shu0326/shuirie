@@ -3,115 +3,11 @@
   padding: 0;
 }
 
-/*
-.top-title {
-  font-size: 80px;
-  font-family: 'Kaushan Script', cursive;
-  font-style: italic;
-  color: white;
-  z-index: 100;
-  position: absolute;
-  top: 30%;
-  left: 70%;
-  transform: translate(-50%,-50%);
-}
-*/
-
-/*
-右から左へ
-----------------------------*/
-/*
-@keyframes infinity-scroll-left {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}*/
-
-/*
-IE11対策
-----------------------------*/
-/*
-_:-ms-lang(x)::-ms-backdrop,
-.d-demo {
-  display: -ms-grid;
-  overflow: hidden;
-}*/
-/*----------------------------*/
-/*
-.d-demo__item1{
-  display: flex;
-  flex-direction: column;
-}
-
-.d-demo{
-  height: 680px;
-  background-color: whitesmoke;
-}
-
-.d-demo__wrap {
-  display: flex;
-  overflow: hidden;
-}
-
-.d-demo__list {
-  display: flex;
-  list-style: none;
-  height: 100%;
-  justify-content: center;
-}
-
-.d-demo__list--left{
-animation :infinity-scroll-left 40s infinite linear 0.1s both;
-}
-*/
-
-/*
-.d-demo__item {
-  width: calc(100vw / 6);
-}
-.d-demo__item > img{
-  width: 100%;
-}
-*/
-
 .slide-image {
   width: auto;
   height: 90vh;
   margin-right: 20px;
 }
-
-/*   First block   */
-/*
-.first-block {
-  background-size: cover;
-  width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: aqua;
-  margin: 100px;
-}
-*/
-/*
-.top-title-container {
-  margin-top: 35px;
-  text-align: center;
-  background-color: whitesmoke;
-}
-*/
-
-/*
-h1 {
-  font-size: 60px;
-  font-family: serif;
-  color: #444;
-}
-*/
-/*   First block End   */
 
 /*   Second block   */
 .second-block {
@@ -191,19 +87,6 @@ footer{
 b {
   font-size: 40px;
 }
-
-/*
-.top-about1-container{
-  display: flex;
-  justify-content: center;
-}
-
-.top-about1-right{
-  width: 50vw;
-  margin: 0 0 0 0px;
-  padding: 0;
-}
-*/
 
 .top-about1-photo{
   width: 50vw; /*画像サイズ指定*/

@@ -6,7 +6,6 @@
   z-index: -10;
 }
 
-
 .title {
   font-size: 120px;
   font-style: italic;
@@ -134,15 +133,6 @@ _:-ms-lang(x)::-ms-backdrop,
 animation :infinity-scroll-left 40s infinite linear 0.1s both;
 }
 
-/*
-.d-demo__item {
-  width: calc(100vw / 6);
-}
-.d-demo__item > img{
-  width: 100%;
-}
-*/
-
 .slide-image0 {
   height: 60vh;
   margin-right: 20px;
@@ -216,7 +206,6 @@ width: 20vw;
   justify-content: center; /* 水平方向に中央配置 */
   align-items: center; /* 垂直方向に中央配置 */
 }
-
 
 .Hokkaido-gourmet1-right{
   margin-left: 2vw;
@@ -347,7 +336,3 @@ width: 20vw;
 .hover14{
   width: 13vw;
 }
-
-
-
-

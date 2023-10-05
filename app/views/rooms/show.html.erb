@@ -1,91 +1,57 @@
 <div class="DM-page">
-
-<div class="dmmessagebox">
-  <div class="dmusername">
-    <% @entries.each do |e| %>
-      <% if e.user_id != current_user&.id %>
-        <div class="left2">
-          <h3><strong><a href="/users/<%= e.user_id %>"><%= e.user.name %></a>とのDM</strong></h3>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
-</div>
-
-<!--
-<div class="chat-group-show-talk">
-  <% if @messages.present? %>
-    <% @messages.each do |m| %>
-      <% if m.user_id == current_user.id %>
-        <div class="right">
-      <% else %>
-        <div class="left">
-      <% end %>
-          <small>
-            <%= link_to user_path(m.user) do %>
-            <%= image_tag m.user.image_url, style: "border-radius: 50%; width: 100px; height: 100px; object-fit:cover;", size: "250x200" if m.user.image?  %>
-            <% end %>
-          </small>
-          <strong>
-            <%= m.body %>
-          </strong>
-        </div>
+  <div class="dmmessagebox">
+    <div class="dmusername">
+      <% @entries.each do |e| %>
+        <% if e.user_id != current_user&.id %>
+          <div class="left2">
+            <h3><strong><a href="/users/<%= e.user_id %>"><%= e.user.name %></a>とのDM</strong></h3>
+          </div>
         <% end %>
-      <% else %>
-      <h3 class="text-center">メッセージはまだありません</h3>
-  <% end %>
-</div>
--->
-
-
-<div class="chat-group-show-talk1">
-  <% if @messages.present? %>
-    <% @messages.each do |m| %>
-      <% if m.user_id == current_user.id %>
-        <div class="right1">
-          <div class="dmmessage-userphoto">
-          
-          </div>
-
-          <div class="dmmessage-body-right">
-          <%= m.body %>
-          </div>
-        </div>
-      <% else %>
-        <div class="left1">
-          <div class="dmmessage-userphoto">
-          <%= link_to user_path(m.user) do %>
-          <%= image_tag m.user.image_url, style: "border-radius: 50%; width: 100px; height: 100px; object-fit:cover;", size: "250x200" if m.user.image?  %>
-          <% end %>
-          </div>
-
-          <div class="dmmessage-body-left">
-          <%= m.body %>
-          </div>
-        </div>
       <% end %>
-    <% end %>
+    </div>
+  </div>
+
+  <div class="chat-group-show-talk1">
+    <% if @messages.present? %>
+      <% @messages.each do |m| %>
+        <% if m.user_id == current_user.id %>
+          <div class="right1">
+            <div class="dmmessage-userphoto">
+            </div>
+
+            <div class="dmmessage-body-right">
+              <%= m.body %>
+            </div>
+          </div>
+        <% else %>
+          <div class="left1">
+            <div class="dmmessage-userphoto">
+              <%= link_to user_path(m.user) do %>
+                <%= image_tag m.user.image_url, style: "border-radius: 50%; width: 100px; height: 100px; object-fit:cover;", size: "250x200" if m.user.image?  %>
+              <% end %>
+            </div>
+
+            <div class="dmmessage-body-left">
+              <%= m.body %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
     <% else %>
       <h3 class="text-center">メッセージはまだありません</h3>
-  <% end %>
-</div>
-
-
-<!--
-<%= link_to "ユーザー一覧に戻る", users_path %>
--->
-
+    <% end %>
+  </div>
+  <!--  <%= link_to "ユーザー一覧に戻る", users_path %> -->
 </div>
 
 <div class="dmMain">
-<%= form_for @message do |f| %>
-  <%= f.text_field :body, :placeholder => "メッセージを入力して下さい" , :size => 100 %>
-  <%= f.hidden_field :room_id, :value => @room.id %>
-  <br>
-  <%= f.submit "送信する" %>
-<% end %>
+  <%= form_for @message do |f| %>
+    <%= f.text_field :body, :placeholder => "メッセージを入力して下さい" , :size => 100 %>
+    <%= f.hidden_field :room_id, :value => @room.id %>
+    <br>
+    <%= f.submit "送信する" %>
+  <% end %>
 </div>
-
 
 <!--
 <style>

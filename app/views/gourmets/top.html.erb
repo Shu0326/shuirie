@@ -1,127 +1,108 @@
-<!--
-<div class="d-demo">
-<p class="top-title">EaTravel</p>
-</div>
--->
-
 <div class="top-top">
-<video autoplay="autoplay"  muted="muted" class="video-content-top" src="/assets/Gotouchi1.mp4"></video>
+  <video autoplay="autoplay"  muted="muted" class="video-content-top" src="/assets/Gotouchi1.mp4"></video>
 </div>
 
 <!--   Second block Start   -->
 <div class="second-block">
-  <!--<p class="title-about">
-    -About-
-  </p>-->
-
   <div class="top-about1-container">
+    
     <div class="top-about1-photo">
       <%= image_tag "travel3.jpg", class:"top-about-image1" %>
     </div>
 
     <div class="top-about1-right">
-      <!--<div class="top-about1-title">
-        もつ鍋
-      </div>-->
       <div class="top-about1-detail">
-      <p>みなさんは旅行先で何を食べますか？</p>
-      <br>
-      <p>せっかくならご当地グルメを食べたいという人も多いと思います！</p>
-      <br>
-      <p>でも、</p>
-      <br>
-      <p>「旅先で何食べるか決めるのに時間がかかる」</p>
-      <br>
-      <p>「ご当地グルメを調べて、お店も調べるってめんどくさい」</p>
-      <br>
-      <p>と悩むことはありませんか？</p>
-
+        <p>みなさんは旅行先で何を食べますか？</p>
+        <br>
+        <p>せっかくならご当地グルメを食べたいという人も多いと思います！</p>
+        <br>
+        <p>でも、</p>
+        <br>
+        <p>「旅先で何食べるか決めるのに時間がかかる」</p>
+        <br>
+        <p>「ご当地グルメを調べて、お店も調べるってめんどくさい」</p>
+        <br>
+        <p>と悩むことはありませんか？</p>
       </div>
     </div>
   </div>
 
-  <div class="top-about2-container">
-    <div class="top-about2-right">
-      <!--<div class="top-about2-title">
-        博多ラーメン
-      </div>  -->
-      <div class="top-about2-detail">
-      <p>そんなあなたにおすすめのサイトです！</p>
-      <br>
-      <p>このサイトではご当地グルメがわかって、</p>
-      <br>
-      <p>色々な人のおすすめのお店を知ることが出来ます。</p>
-      <br>
-      <p>これでもう旅行先のお店選びに迷わない！</p>
-      
+    <div class="top-about2-container">
+      <div class="top-about2-right">
+        <div class="top-about2-detail">
+          <p>そんなあなたにおすすめのサイトです！</p>
+          <br>
+          <p>このサイトではご当地グルメがわかって、</p>
+          <br>
+          <p>色々な人のおすすめのお店を知ることが出来ます。</p>
+          <br>
+          <p>これでもう旅行先のお店選びに迷わない！</p>
+        </div>
+      </div>
+
+      <div class="top-about2-photo">
+        <%= image_tag "top-gourmet1.jpg", class:"top-about-image2" %>
       </div>
     </div>
 
-    <div class="top-about2-photo">
-      <%= image_tag "top-gourmet1.jpg", class:"top-about-image2" %>
-    </div>
   </div>
-</div>
-
 </div>
 <!--   Second block End   -->
 
-  
 <!--   Third block Start   -->
 <div class="third-block">
   <p class="title-feature">
   -Feature-
   </p>
-    <div class="feature-container">
-      <p class="info-text">
-        <b>Seacrh</b>
-        <br>
-        <%= link_to gourmets_path do %>
+    
+  <div class="feature-container">
+    <p class="info-text">
+      <b>Seacrh</b>
+      <br>
+      <%= link_to gourmets_path do %>
         <%= image_tag "search.avif", class:"feature-image" %>
-        <% end %>
-        <br>
-          <span class="font-small">
-          ~ご当地グルメが食べられるお店を探す~
-          </span>
-      </p>
-
+      <% end %>
+      <br>
+      <span class="font-small">
+        ~ご当地グルメが食べられるお店を探す~
+      </span>
+    </p>
       
-      <p class="info-text">
-        <b>Test</b>
-        <br>
-        <%= link_to new_test_path do %>
+    <p class="info-text">
+      <b>Test</b>
+      <br>
+      <%= link_to new_test_path do %>
         <%= image_tag "test.jpg", class:"feature-image" %>
-        <% end %>
-        <br>
-        <span class="font-small">
+      <% end %>
+      <br>
+      <span class="font-small">
         ~おすすめのご当地グルメを診断する~
-        </span>
-      </p>
-      
+      </span>
+    </p>  
 
-      <p class="info-text">
-        <b>Post</b>
-        <br>
-        <%= link_to new_gourmet_path do %>
+    <p class="info-text">
+      <b>Post</b>
+      <br>
+      <%= link_to new_gourmet_path do %>
         <%= image_tag "post.jpg", class:"feature-image" %>
-        <% end %>
-        <br>
-        <span class="font-small">
+      <% end %>
+      <br>
+      <span class="font-small">
         ~おすすめのお店を共有する~
-        </span>
-      </p>
+      </span>
+    </p>
 
-      <p class="info-text">
-        <b>My page</b>
-        <br>
-        <%= link_to user_path(current_user.id) do %>
+    <p class="info-text">
+      <b>My page</b>
+      <br>
+      <%= link_to user_path(current_user.id) do %>
         <%= image_tag "mypage.jpg", class:"feature-image" %>
-        <% end %>
-        <br>
-        <span class="font-small">
+      <% end %>
+      <br>
+      <span class="font-small">
         ~お気に入りの保存~
-        </span>
-      </p>
-    </div>
+      </span>
+    </p>
+  </div>
 </div>
 <!--   Third block End   -->

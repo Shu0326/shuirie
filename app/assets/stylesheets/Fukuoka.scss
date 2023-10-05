@@ -6,7 +6,6 @@
   z-index: -10;
 }
 
-
 .title {
   font-size: 120px;
   font-style: italic;
@@ -92,8 +91,6 @@
   }
 }
 
-
-
 /*
 右から左へ
 ----------------------------*/
@@ -119,8 +116,6 @@ _:-ms-lang(x)::-ms-backdrop,
 }
 /*----------------------------*/
 
-
-
 .d-demo__wrap-Fukuoka {
   display: flex;
   overflow: hidden;
@@ -137,15 +132,6 @@ _:-ms-lang(x)::-ms-backdrop,
 .d-demo__list--left-Fukuoka {
 animation :infinity-scroll-left 40s infinite linear 0.1s both;
 }
-
-/*
-.d-demo__item {
-  width: calc(100vw / 6);
-}
-.d-demo__item > img{
-  width: 100%;
-}
-*/
 
 .slide-image0 {
   height: 60vh;
@@ -192,7 +178,6 @@ margin-right: 4vw;
 width: 20vw;
 }
 
-
 .Fukuoka-gourmet-title{
   text-align: center;
   padding-top: 30px;
@@ -218,7 +203,6 @@ width: 20vw;
   justify-content: center; /* 水平方向に中央配置 */
   align-items: center; /* 垂直方向に中央配置 */
 }
-
 
 .Fukuoka-gourmet1-right{
   margin-left: 2vw;
@@ -251,7 +235,6 @@ width: 20vw;
   font-size: 20px;
 }
 
-
 .Fukuoka-gourmet2-container{
   display: flex;
   justify-content: center;
@@ -268,7 +251,6 @@ width: 20vw;
   justify-content: center; /* 水平方向に中央配置 */
   align-items: center; /* 垂直方向に中央配置 */
 }
-
 
 .Fukuoka-gourmet2-right{
   margin-left: 2vw;
@@ -301,7 +283,6 @@ width: 20vw;
   font-size: 20px;
   width: 18vw;
 }
-
 
 .hover {
   padding-bottom: 5px;
