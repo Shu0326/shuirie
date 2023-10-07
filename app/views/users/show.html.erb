@@ -34,7 +34,7 @@
         <%= render 'stats' %>
 
         <div class="user-in">
-          <!-- <h2><%= @user.email %></h2> -->
+          <h2><%= @user.email %></h2> 
           <% if @user.id == current_user.id %>
             <%= @msg %>
           <% else %>

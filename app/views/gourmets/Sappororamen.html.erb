@@ -10,82 +10,92 @@
       </div>
     </div>
   </div>
-  </div>
+</div>
 
-<div class="Sappororamen-pagenation">
-<%= page_entries_info @Sappororamen %>
-<%= paginate @Sappororamen %>
+<div class="food-pagenation">
+  <%= page_entries_info @Sappororamen %>
+  <%= paginate @Sappororamen %>
 <div>
 
-
-<div class="Sappororamenbox1">
-<% @Sappororamen.each do |t| %>
-  <div class="Sappororamenbox2">
-  <!--
-    <%= image_tag t.user.image_url, class:"user_img1", style: "border-radius: 50%; width: 100px; height: 100px; object-fit:cover;" %>
-  -->
-
-    <div class="Sappororamen-gourmets-container1">
-      <%= image_tag t.image_url, class:"Sappororamen-index-photo" if t.image? %>
-      <br>
-      <div class="Sappororamen-field1">
-        <div class="Sappororamen-body1">
-        店名
-        </div>
-        <div class="Sappororamen-body2">
-        <%= t.shop_name %>
-        </div>
-      </div>
-
-      <div class="Sappororamen-field1">
-        <div class="Sappororamen-body1">
-        価格
-        </div>
-        <div class="Sappororamen-body2">
-        <%= t.price %>
-        </div>
-      </div>
-
-      <div class="Sappororamen-field1">
-        <div class="Sappororamen-body1">
-          総合評価
-        </div>
-        <div class="Sappororamen-body2">
-          <div class="star-rating">
-            <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
-            <span class="star-rating-back">★★★★★</span>
-          </div> 
-        </div>
-      </div>
-
-      <!--<%= link_to "詳細", gourmet_path(t.id) %>
-      <br>
-      <%= link_to t.user.name, user_path(t.user.id) %>
-      <%= t.created_at %> -->
-
-      <div class="Sappororamen-field2">
-      <% if user_signed_in? %>
-        <% if current_user.already_liked?(t) %>
-          <%= link_to gourmet_like_path(id: t.id, gourmet_id: t.id), method: :delete do %>
-          <i class="fas fa-heart"></i><%= t.likes.count %>
-          <% end %>
-        <% else %>
-          <%= link_to gourmet_likes_path(id: t.id, gourmet_id: t.id), method: :gourmet do %>
-          <i class="fas fa-heart"></i><%= t.likes.count %>
-          <% end %>
+<div class="foodbox1">
+  <% @Sappororamen.each do |t| %>
+    <div class="foodbox2">
+    <!--  <%= image_tag t.user.image_url, class:"user_img1", style: "border-radius: 50%; width: 100px; height: 100px; object-fit:cover;" %> -->
+      <div class="food-gourmets-container1">
+        <%= link_to gourmet_path(t.id) do %>
+        <%= image_tag t.image_url, class:"food-index-photo" if t.image? %>
         <% end %>
-      <% else %>
-        <i class="fas fa-heart"></i><%= t.likes.count %>
-      <% end %>
+        <br>
+        <div class="food-field1">
+          <div class="food-body1">
+            店名
+          </div>
+          <div class="food-body2">
+            <%= t.shop_name %>
+          </div>
+        </div>
 
-      <br>
+        <div class="food-field1">
+          <div class="food-body1">
+            価格
+          </div>
+          <div class="food-body2">
+            <%= t.price %>
+          </div>
+        </div>
 
-      <% if user_signed_in? && current_user.id == t.user_id %>
-        <%= link_to "編集", edit_gourmet_path(t.id) %>
-        <%= link_to "削除", gourmet_path(t.id), method: :delete %>
-      <% end %> 
-      </div>
+        <div class="food-field1">
+          <div class="food-body1">
+            総合評価
+          </div>
+          <div class="food-body2">
+            <div class="star-rating">
+              <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
+              <span class="star-rating-back">★★★★★</span>
+            </div> 
+          </div>
+        </div>
+
+        <!--
+        <%= link_to "詳細", gourmet_path(t.id) %>
+        <br>
+        <%= t.created_at %> 
+        -->
+        
+        <div class="food-field1">
+          <div class="food-body1">
+            投稿者
+          </div>
+          <div class="food-body2">
+          <%= link_to t.user.name, user_path(t.user.id) %>
+          </div>
+        </div>
+
+        <div class="food-field2">
+          <div class="food-field3">
+            <% if user_signed_in? %>
+              <% if current_user.already_liked?(t) %>
+                <%= link_to gourmet_like_path(id: t.id, gourmet_id: t.id), method: :delete do %>
+                <i class="fas fa-heart"></i><%= t.likes.count %>
+                <% end %>
+              <% else %>
+                <%= link_to gourmet_likes_path(id: t.id, gourmet_id: t.id), method: :gourmet do %>
+                <i class="fas fa-heart"></i><%= t.likes.count %>
+                <% end %>
+              <% end %>
+            <% else %>
+              <i class="fas fa-heart"></i><%= t.likes.count %>
+            <% end %>
+            <br>
+            <% if user_signed_in? && current_user.id == t.user_id %>
+              <%= link_to "編集", edit_gourmet_path(t.id) %>
+              <%= link_to "削除", gourmet_path(t.id), method: :delete %>
+            <% end %> 
+          </div>
+        </div>
+
+      </div>  
     </div>  
-  </div>  
-<% end %>
+  <% end %>
 </div>
+

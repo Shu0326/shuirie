@@ -3,10 +3,17 @@
   padding: 0;
 }
 
-.slide-image {
-  width: auto;
-  height: 90vh;
-  margin-right: 20px;
+.top-video{
+  text-align: center;
+  width: 100%;
+  position: relative;
+  padding-top: 50px;
+  background-color: #f4ffff;
+  }
+
+.video-content-top{
+  width: 95vw;
+  height: 100vh;
 }
 
 /*   Second block   */
@@ -16,28 +23,60 @@
   padding-bottom: 100px;
 }
 
-.about-container {
+.top-about1-container {
   display: flex;
   justify-content: center;
-  flex-direction: row;
   align-items: center;
 }
 
-.title-about{
-  font-size: 60px;
-  font-style: italic;
-  font-family: 'Kaushan Script', cursive;
-  color: #444;
-  text-align: center;
+.top-about1-photo{
+  width: 50vw; /*画像サイズ指定*/
+  margin-right: 0vw;
+  overflow: hidden;
+  position: relative;
 }
 
-.info-text {
-  font-size: 20px;
-  font-style: italic;
-  margin-bottom: 20px;
-  color: #444;
-  width: 30%;
+.top-about-image1{
+  width: 50vw;
 }
+
+.top-about1-box {
+  width: 50vw; /* 文章が広がりすぎないように制限 */
+}
+
+.top-about1-detail{
+  margin: 5vh 5vw;
+  padding: 0;
+  font-size: 20px;
+}
+
+.top-about2-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-about2-photo{
+  width: 50vw; /*画像サイズ指定*/
+  margin-right: 0vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.top-about-image2{
+  width: 50vw;
+}
+
+.top-about2-box{
+  width: 50vw; /* 文章が広がりすぎないように制限 */
+}
+
+.top-about2-detail{
+  margin: 5vh 6vw;
+  padding: 0;
+  font-size: 20px;
+}
+
 /*   Second block End   */
 
 /*   Third block Start   */
@@ -47,13 +86,6 @@
   padding-bottom: 100px;
 }
 
-.feature-container {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
-}
-
 .title-feature{
   font-size: 60px;
   font-style: italic;
@@ -61,6 +93,21 @@
   color: #444;
   text-align: center;
   margin-bottom: 100px;
+}
+
+.feature-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.info-text {
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #444;
+  width: 30%;
 }
 
 .font-small {
@@ -86,86 +133,4 @@ footer{
 
 b {
   font-size: 40px;
-}
-
-.top-about1-photo{
-  width: 50vw; /*画像サイズ指定*/
-  margin-right: 0vw;
-  overflow: hidden;
-  position: relative;
-}
-
-.top-about-image1{
-  width: 50vw;
-}
-
-.top-about1-title {
-  margin: 0;
-  padding-top: 30px;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.top-about1-detail{
-  margin: 5vh 5vw;
-  padding: 0;
-  font-size: 20px;
-}
-
-.top-about1-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.top-about1-right {
-  width: 50vw; /* 文章が広がりすぎないように制限 */
-}
-
-
-.top-about2-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.top-about2-photo{
-  width: 50vw; /*画像サイズ指定*/
-  margin-right: 0vw;
-  overflow: hidden;
-  position: relative;
-}
-
-.top-about-image2{
-  width: 50vw;
-}
-
-.top-about2-right{
-  width: 50vw; /* 文章が広がりすぎないように制限 */
-}
-
-.top-about2-title {
-  margin: 0;
-  padding-top: 30px;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.top-about2-detail{
-  margin: 5vh 6vw;
-  padding: 0;
-  font-size: 20px;
-}
-
-.video-content-top{
-  width: 95vw;
-  height: 100vh;
-}
-
-.top-top{
-text-align: center;
-width: 100%;
-position: relative;
-padding-top: 50px;
-background-color: #f4ffff;
 }

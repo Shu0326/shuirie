@@ -19,7 +19,7 @@
 }
 
 /* imgのみ */
-.item2 {
+.item1 {
   opacity: 0;
   width: 100%;
   height: 100%;
@@ -107,7 +107,7 @@
 IE11対策
 ----------------------------*/
 _:-ms-lang(x)::-ms-backdrop,
-.d-demo-Hokkaido {
+.d-demo {
   display: -ms-grid;
   overflow: hidden;
   height: 60vh;
@@ -116,20 +116,20 @@ _:-ms-lang(x)::-ms-backdrop,
 }
 /*----------------------------*/
 
-.d-demo__wrap-Hokkaido {
+.d-demo__wrap {
   display: flex;
   overflow: hidden;
   width: 50vw;
 }
 
-.d-demo__list-Hokkaido {
+.d-demo__list {
   display: flex;
   list-style: none;
   height: 60vh;
   justify-content: center;
 }
 
-.d-demo__list--left-Hokkaido {
+.d-demo__list--left {
 animation :infinity-scroll-left 40s infinite linear 0.1s both;
 }
 
@@ -138,13 +138,7 @@ animation :infinity-scroll-left 40s infinite linear 0.1s both;
   margin-right: 20px;
 }
 
-.slide-image1{
-  border-radius: 40px/60px ; 
-  width:40vw;
-  height: 60vh;
-}
-
-.Hokkaido-intro-container1{
+.intro-container1{
   display: flex;
   padding-top: 30px;
   padding-left: 5vw;
@@ -153,33 +147,33 @@ animation :infinity-scroll-left 40s infinite linear 0.1s both;
   background-color: #f4ffff;
 }
 
-.Hokkaido-intro{
+.intro{
 padding: 0;
 display: flex;
 width: 40vw;
 }
 
-.Hokkaido-intro-title{
+.intro-detail{
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  margin-left: 4vw;
+  margin-right: 4vw;
+  width: 20vw;
+  }
+  
+
+.intro-title{
 -ms-writing-mode: tb-rl;
 writing-mode: vertical-rl;
 }
 
-.Hokkaido-intro-title p{
+.intro-title p{
   font-weight: bold;
   font-size: 35px;
   font-family: serif;
 }
 
-.Hokkaido-intro-detail{
--ms-writing-mode: tb-rl;
-writing-mode: vertical-rl;
-margin-left: 4vw;
-margin-right: 4vw;
-width: 20vw;
-}
-
-
-.Hokkaido-gourmet-title{
+.gourmet-title{
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -188,7 +182,7 @@ width: 20vw;
   background-color: #f4ffff;
 }
 
-.Hokkaido-gourmet1-container{
+.gourmet1-container{
   display: flex;
   justify-content: center;
   padding-left: 7.5vw;
@@ -197,7 +191,7 @@ width: 20vw;
   background-color: #f4ffff;
 }
 
-.Hokkaido-gourmet1-photo{
+.gourmet1-photo{
   width: 40vw;
   margin: 0;
   overflow: hidden;
@@ -207,44 +201,51 @@ width: 20vw;
   align-items: center; /* 垂直方向に中央配置 */
 }
 
-.Hokkaido-gourmet1-right{
+.slide-image1{
+  max-width: 40vw;
+  height: 60vh;
+  border-radius: 40px/60px
+}
+
+.gourmet1-box{
   margin-left: 2vw;
   padding: 0;
   width: 40vw;
 }
 
-.Hokkaido-gourmet1-title {
+.gourmet1-title {
   margin: 0;
   font-weight: bold;
   font-size: 30px;
 }
 
-.Hokkaido-gourmet1-catch{
+.gourmet1-catch{
   padding-top: 1vh;
   padding-bottom: 3vh;
 }
 
-.Hokkaido-gourmet1-catch h3{
+.gourmet1-catch h3{
   color: #444;
   font-size: 20px;
 }
 
-.Hokkaido-gourmet1-detail{
+.gourmet1-detail{
   padding: 0;
 }
 
-.Hokkaido-gourmet1-link{
+.gourmet1-link{
   padding-top:6vh;
   font-size: 20px;
+  width: 20vw;
 }
 
 
-.Hokkaido-gourmet1-link a{
+.gourmet1-link a{
   color: #333333;
   font-weight: 500;
 }
 
-.Hokkaido-gourmet2-container{
+.gourmet2-container{
   display: flex;
   justify-content: center;
   padding-left: 7.5vw;
@@ -253,7 +254,7 @@ width: 20vw;
   background-color: #f4ffff;
 }
 
-.Hokkaido-gourmet2-photo{
+.gourmet2-photo{
   width: 40vw;
   margin-left: 3vw;
   overflow: hidden;
@@ -264,36 +265,36 @@ width: 20vw;
 }
 
 
-.Hokkaido-gourmet2-right{
+.gourmet2-box{
   margin-left: 2vw;
   padding: 0;
   width: 40vw;
 }
 
-.Hokkaido-gourmet2-title {
+.gourmet2-title {
   margin: 0;
   font-weight: bold;
   font-size: 30px;
 }
 
-.Hokkaido-gourmet2-catch{
+.gourmet2-catch{
   padding-top: 1vh;
   padding-bottom: 3vh;
 }
 
-.Hokkaido-gourmet2-catch h3{
+.gourmet2-catch h3{
   color: #444;
   font-size: 20px;
 }
 
-.Hokkaido-gourmet2-detail{
+.gourmet2-detail{
   padding: 0;
 }
 
-.Hokkaido-gourmet2-link{
+.gourmet2-link{
   padding-top:6vh;
   font-size: 20px;
-  width: 15vw;
+  width: 20vw;
 }
 
 .hover {

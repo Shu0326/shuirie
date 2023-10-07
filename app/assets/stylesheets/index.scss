@@ -10,7 +10,7 @@
   height: 700px;
 }
 
-.phototitle-index{
+.title-index{
   font-size: 25vh;
   text-align: center;
   font-family: 'Kaushan Script', cursive;
@@ -19,18 +19,12 @@
   padding-top: 300px;
 }
 
+/*
 h1 {
   font-size: 60px;
   font-family: serif;
   color: #444;
-}
-
-.index-gourmets-container{
-  justify-content: center;
-  border-top: solid 2px;
-  margin-left: 400px;
-  margin-right: 400px;
-}
+}*/
 
 a h3{
   font-size: 80px;
@@ -89,36 +83,4 @@ a h3{
   width: 380px;
   height: 250px;
   margin: 10px 10px;
-}
-
-.area{
-  text-align: center;
-}
-
-#Hokkaido-block{
-  width: 100%;
-  height: 300px;
-  padding-top: 80px;
-}
-
-#Tokyo-block{
-  width: 100%;
-  height: 300px;
-  padding-top: 100px;
-}
-
-#Osaka-block{
-  width: 100%;
-  height: 300px;
-  padding-top: 100px;
-}
-
-#Fukuoka-block{
-  width: 100%;
-  height: 300px;
-  padding-top: 100px;
-}
-
-.index-all{
-  background-color: whitesmoke;
 }

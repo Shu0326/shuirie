@@ -89,7 +89,7 @@ class GourmetsController < ApplicationController
   end
 
   def Hokkaidoelse
-    @Hokkaidoelse = Gourmet.where(food:"その他")
+    @Hokkaidoelse = Gourmet.where(food:"その他(北海道)")
     @Hokkaidoelse = @Hokkaidoelse.page(params[:page]).per(6)
   end
 
@@ -109,7 +109,7 @@ class GourmetsController < ApplicationController
   end
 
   def Tokyoelse
-    @Tokyoelse = Gourmet.where(food:"その他")
+    @Tokyoelse = Gourmet.where(food:"その他(東京)")
     @Tokyoelse = @Tokyoelse.page(params[:page]).per(6)
   end
 
@@ -129,7 +129,7 @@ class GourmetsController < ApplicationController
   end
 
   def Osakaelse
-    @Osakaelse = Gourmet.where(food:"その他")
+    @Osakaelse = Gourmet.where(food:"その他(大阪)")
     @Osakaelse = @Osakaelse.page(params[:page]).per(6)
   end
 
@@ -149,7 +149,7 @@ class GourmetsController < ApplicationController
   end
 
   def Fukuokaelse
-    @Fukuokaelse = Gourmet.where(food:"その他")
+    @Fukuokaelse = Gourmet.where(food:"その他(福岡)")
     @Fukuokaelse = @Fukuokaelse.page(params[:page]).per(6)
   end
 

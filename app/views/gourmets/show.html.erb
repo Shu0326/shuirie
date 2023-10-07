@@ -71,6 +71,11 @@
     
     <p><%= @gourmet.created_at %></p>
 
+    <% if user_signed_in? && current_user.id == @gourmet.user_id %>
+      <%= link_to "編集", edit_gourmet_path(@gourmet.id) %>
+      <%= link_to "削除", gourmet_path(@gourmet.id), method: :delete %>
+    <% end %> 
+
     <div class=show-gourmet-like>
     <% if user_signed_in? %>
       <% if current_user.already_liked?(@gourmet) %>

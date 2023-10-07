@@ -15,10 +15,6 @@
   background-color: #f4ffff;
 }
 
-.chat-group-show-talk{
-  background-color: #b7dbff;
-}
-
 .dmmessagebox {
   display: flex;
   flex-direction: column;
@@ -28,74 +24,6 @@
 
 .left2 {
   text-align: center; /* テキストを左寄せにする */
-}
-
-/* 以下は見た目を調整するためのスタイルです。必要に応じて調整してください。 */
-/*.left2 h3 {
-  background-color: lightgray;
-}*/
-
-.right{
-  font-size: 30px;
-  width: 30%;
-  height: 50px;
-  margin-bottom: 5%;
-  margin-left: 50%;
-  // flex-direction: row-reverse;
-  position: relative;
-  display: inline-block;
-  //display:flex-end;
-  padding: 10px 20px;
-  background:  #CCFFCC;
-  text-align: left;
-  border-radius: 12px;
-  small{
-    left: 640px;
-}
-}
-.left{
-  font-size: 30px;
-  width: 30%;
-  height: 50px;
-  margin-bottom: 5%;
-  margin-right:50% ;
-  margin-left: 17vw;
-  // flex-direction: row;
-  position: relative;
-display: inline-block;
-display: flex-start;
-padding: 10px 20px;
-background: #CCFFCC;
-text-align: left;
-border-radius: 12px;
-small{
-  right: 640px;
-}
-}
-
-.left::after {
-  content: "";
-  border: 15px solid transparent;
-  border-top-color: #CCFFCC;
-  position: absolute;
-  top: 10px;
-  left: -15px;
-  }
-
-.right::after {
-  content: "";
-  border: 15px solid transparent;
-  border-top-color: #CCFFCC;
-  position: absolute;
-  top: 10px;
-  right: -15px;
-  }
-
-.right-chat{
-  margin-left: 110%;
-}
-.left-chat{
-  margin-right: 120%;
 }
 
 small{
@@ -169,5 +97,4 @@ small{
 
 .chat-group-show-talk1{
   background-color: #b7dbff;
-  height:60vh;
 }
